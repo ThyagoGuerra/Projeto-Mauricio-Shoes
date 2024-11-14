@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="style/global.css">
+    <title>Maurício Calçados - Landing Page</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img\Logo_Loja-removebg-preview.png">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="#produtos-loja" class="nav-link">Produtos</a></li>
+                    <li class="nav-item"><a href="#produtos-loja" class="nav-link">Conheça mais</a></li>
+                    <li class="nav-item"><a href="#nossa-loja" class="nav-link">Sobre a Empresa</a></li>
+                    <li class="nav-item"><a href="#atendimento" class="nav-link">Atendimento</a></li>
+                    <li class="nav-item"><a href="#localidade" class="nav-link">Localidade</a></li>
+                </ul>
+            </div>
+            <div class="btn-colors-background">
+                <input type="checkbox" class="checkbox" id="chk">
+                <label class="label" for="chk">
+                    <i class="ri-moon-fill" style="color: #a8a806;"></i>
+                    <i class="ri-sun-fill" style="color: #d5d505;"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><i class="ri-menu-line" class="icon1"></i></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="#produtos-loja" class="nav-link">Produtos</a></li>
+                <li class="nav-item"><a href="#produtos-loja" class="nav-link">Conheça mais</a></li>
+                <li class="nav-item"><a href="#nossa-loja" class="nav-link">Sobre a Empresa</a></li>
+                <li class="nav-item"><a href="#atendimento" class="nav-link">Atendimento</a></li>
+                <li class="nav-item"><a href="#localidade" class="nav-link">Localidade</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container"> <!-- Informações de fundo -->
+        <h1>MAURICIOSHOES|</h1> <!-- Título -->
+        <div class="secondtilte">
+            <h2 class="describe">MIZUNO</h2> <!-- Segundo Titulo (lado direito )-->
+            <p> <!-- Descrição -->
+                O Mizuno Mirai 5 é um tênis leve e confortável, ideal para iniciantes e uso casual. Oferece bom
+                amortecimento, com entressola em EVA e cabedal respirável, proporcionando conforto e estabilidade para
+                corridas leves e caminhadas.
+            </p>
+        </div>
+    </div>
+
+    <div class="imgmovie"> <!-- Informações centrais (redes, img, video)-->
+        <div class="information-left"> <!-- Lado Esquerdo -->
+            <div class="items">
+                <div class="item">
+                    <a href="https://www.instagram.com/mauriciocalcadosltda/" target="_blank" class="icon"><i class="ri-instagram-fill"></i></a>
+                </div>
+                <div class="item">
+                    <a href="https://www.facebook.com/share/15EuZ99PGv/?mibextid=LQQJ4d" target="_blank" class="icon"><i class="ri-facebook-circle-fill"></i></a>
+                </div>
+                <div class="item">
+                    <a href="https://wa.me/+5511994256414" target="_blank" class="icon"><i class="ri-whatsapp-fill"></i></a>
+                </div>
+            </div>
+            <div class="detalhes"> <!-- Botão detalhes -->
+                <a href="secondPage.html" target="_blank"><button class="detalhes-button">Detalhes do Tênis</button></a>
+            </div>
+        </div>
+        <img src="img/Mizuno principal.png" class="img-centralizada"> <!-- Imagem Central (imagen do tênis que será posicionado do meio) -->
+        <div class="information-right"> <!-- Lado Direito-->
+            <video loop autoplay muted class="video-loja">
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="mobile-imgmovie"> <!-- Informações centrais (redes, img, video)-->
+        <div class="mobile-information-left"> <!-- Lado Esquerdo -->
+            <div class="mobile-items">
+                <div class="mobile-item">
+                    <a href="https://www.instagram.com/mauriciocalcadosltda/" target="_blank" class="mobile-icon"><i class="ri-instagram-fill"></i></a>
+                </div>
+                <div class="mobile-item">
+                    <a href="https://www.facebook.com/share/15EuZ99PGv/?mibextid=LQQJ4d" target="_blank" class="mobile-icon"><i class="ri-facebook-circle-fill"></i></a>
+                </div>
+                <div class="mobile-item">
+                    <a href="https://wa.me/5511961839801" target="_blank" class="mobile-icon"><i class="ri-whatsapp-fill"></i></a>
+                </div>
+                
+            </div>
+            <div class="mobile-detalhes"> <!-- Botão detalhes -->
+                <a href="secondPage.html" target="_blank"><button class="mobile-detalhes-button">Detalhes do Tênis</button></a>
+            </div>
+        </div>
+        <img src="img/Mizuno principal.png" class="mobile-img-centralizada"> <!-- Imagem Central (imagen do tênis que será posicionado do meio) -->
+        <div class="mobile-information-right"> <!-- Lado Direito-->
+            <video loop autoplay muted class="mobile-video-loja">
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+    <div class="loop"> <!-- Loop infinito dos Tênis -->
+        <div class="list">
+            <div class="inner" style="--position: 1"><img src="img/Puma.png"></div>
+            <div class="inner" style="--position: 2"><img src="img/Democrata-removebg-preview.png"></div>
+            <div class="inner" style="--position: 3"><img src="img/Fila.png"></div>
+            <div class="inner" style="--position: 4"><img src="img/Mizunoo.png"></div>
+            <div class="inner" style="--position: 5"><img src="img/Nike.png"></div>
+            <div class="inner" style="--position: 6"><img src="img/Olympikus.png"></div>
+            <div class="inner" style="--position: 7"><img src="img/Piccadilly-removebg-preview.png"></div>
+            <div class="inner" style="--position: 8"><img src="img/Viamarta.png"></div>
+            <div class="inner" style="--position: 9"><img src="img/usaflex-removebg-preview.png"></div>
+            <div class="inner" style="--position: 10"><img src="img/Boaonda.png"></div>
+        </div>
+    </div>
+
+    <div id="produtos-loja"> <!--Primeira Coluna de Tenis-->
+        <h1 class="icones">Icones da Loja</h1>
+        <div class="produtos-container">
+            <div class="produto"> <!--Primeira foto-->
+                <img src="img/Social.png" alt="Tenis" class="img-tenis">
+                <p class="nome-tenis">Democrata James</p>
+                <p class="descricao-tenis">O sapato social Democrata James é elegante e confortável, feito em couro, ideal para ocasiões formais.
+                </p>
+            </div>
+
+            <div class="produto"> <!--Segunda foto-->
+                <img src="img/Democrata-tenis.png" alt="Tenis" class="img-tenis">
+                <p class="nome-tenis">Democrata</p>
+                <p class="descricao-tenis">O Sapatênis Democrata Denim design versátil permite combinações com jeans e roupas casuais, enquanto o solado emborrachado garante conforto e segurança ao caminhar.</p>
+            </div>
+
+            <div class="produto"> <!--Terceira foto-->
+                <img src="img/Social Feminino.png" alt="Tenis" class="img-tenis">
+                <p class="nome-tenis">Scarpan Piccadillya</p>
+                <p class="descricao-tenis">Scarpan Piccadilly combina elegância e conforto, com design casual e materiais leves, ideal para o dia a dia. </p>
+            </div>
+
+            <div class="produto"> <!--Quarta foto-->
+                <img src="img/Fila 4.png" alt="Tenis" class="img-tenis">
+                <p class="nome-tenis">Fila</p>
+                <p class="descricao-tenis">O Fila Progress é um tênis esportivo projetado para oferecer conforto, leveza e estilo durante atividades físicas ou no uso casual</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="produtos-loja"> <!--Segunda Coluna de Produtos-->
+        <h1 class="icones">Conheça Também</h1>
+        <div class="produtos-container">
+            <div class="produto"> <!--Primeira foto-->
+                <img src="img/Homen aranha.png" alt="Tenis" class="img-tenis">
+                <p class="nome-tenis">Tênis Infantil</p>
+                <p class="descricao-tenis">O Tênis do Homem-Aranha é um calçado infantil que traz o universo do super-herói favorito das crianças. </p>
+            </div>
+
+            <div class="produto"> <!--Segunda foto-->
+                <img src="img/All Star.png" alt="Tenis" class="img-tenis">
+                <p class="nome-tenis">Tênis Infantil</p>
+                <p class="descricao-tenis">O Tênis Diversão Canvas é um calçado infantil leve e estiloso, perfeito para o dia a dia das crianças.</p>
+            </div>
+
+            <div class="produto"> <!--Terceira foto-->
+                <img src="img/Cinto.png" alt="Tenis" class="mobile-cinto" class="img-tenis">
+                <p class="nome-tenis">Cinto</p>
+                <p class="descricao-tenis">O cinto Fasolo é um acessório conhecido pela qualidade de seus materiais e acabamento sofisticado</p>
+            </div>
+
+            <div class="produto"> <!--Quarta foto-->
+                <img src="img/Carteira 2.png" alt="Tenis" class="img-tenis">
+                <p class="nome-tenis">Carteira</p>
+                <p class="descricao-tenis">A carteira Fasolo é conhecida pela sua elegância e alta qualidade</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="nossa-loja" id="nossa-loja"> <!--Coluna da loja-->
+        <div class="loja-container">
+            <div class="loja-imagem"> <!--Imagem da loja-->
+                <img src="img/Mauricio.jpg" alt="imagem loja">
+            </div>
+            <div class="loja-texto">
+                <h1 class="loja">Nossa Loja</h1>
+                <p class="des-prim">Há 40 anos, nossa loja familiar vem oferecendo qualidade e variedade em calçados,
+                    bolsas e acessórios na cidade de São Caetano do Sul. Fundada em 01/02/1984, construímos uma
+                    reputação sólida como referência no setor de calçados.
+
+                    Trabalhamos com as melhores marcas do mercado, como Via Marte, Mizuno, Puma, Asics, Olympikus e
+                    Piccadilly, garantindo opções para todos os gostos e estilos. Trabalhamos com uma ampla seleção de
+                    modelos de diversas marcas, tamanhos, cores, incluindo tamanhos especiais, atendendo a todos os
+                    públicos.
+                </p> <!--Descrição da loja-->
+                <p class="des-seg">Além de variedade, oferecemos comodidade: facilitamos suas compras com opções de
+                    parcelamento no cartão e descontos especiais para pagamento à vista. Qualidade, conforto e confiança
+                    há décadas, para você e sua família.
+                    Venha nos conhecer e faça parte dessa história! Visite nossa loja em São Caetano do Sul e descubra
+                    por que somos referência em calçados na região.
+
+                    Aproveite as condições exclusivas e leve o melhor para os seus pés!</p> <!--Descrição da loja-->
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-nossa-loja"> <!--Coluna da loja-->
+        <div class="mobile-loja-container">
+            <h1 class="mobile-loja">Nossa Loja</h1>
+            <div class="mobile-loja-imagem"> <!-- Corrigi a classe para "mobile-loja-imagem" -->
+                <img src="img/Mauricio.jpg" alt="imagem loja">
+            </div>
+            <div class="mobile-loja-texto">
+                <p class="mobile-des-prim">Há 40 anos, nossa loja familiar vem oferecendo qualidade e variedade em calçados,
+                    bolsas e acessórios na cidade de São Caetano do Sul. Fundada em 01/02/1984, construímos uma
+                    reputação sólida como referência no setor de calçados.
+                </p>
+                <p class="mobile-des-seg">Além de variedade, oferecemos comodidade: facilitamos suas compras com opções de
+                    parcelamento no cartão e descontos especiais para pagamento à vista. Qualidade, conforto e confiança
+                    há décadas, para você e sua família.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--Slide do tenis-->
+    <section class="container-slide">
+        <div class="list">
+            <div class="item active">
+                <div class="car-img">
+                    <img src="img/Fila 3.png" alt="imagem carro">
+                </div>
+                <div class="content">
+                    <p class="car-information">
+                        
+                    </p>
+                    <h2>
+                        FILA
+                    </h2>
+                    <p class="description">
+                        O Fila Progress Infantil é um tênis projetado para oferecer conforto e suporte para crianças em idade de crescimento. Com um design moderno e esportivo, ele possui solado em EVA que proporciona leveza e amortecimento, 
+                    </p>
+                    <button class="saiba-mais">
+                        Saiba Mais
+                    </button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="img/Democrata (1).png" alt="imagem carro2" style="  transform: rotate(-0.3deg);">
+                </div>
+                <div class="content">
+                    <p class="car-information">
+                    </p>
+                    <h2>
+                        DEMOCRATA
+                    </h2>
+                    <p class="description">
+                        O sapatênis da Democrata Denim é conhecido por combinar o conforto dos tênis com a elegância de um sapato social. Ele costuma ser fabricado em couro legítimo ou em materiais de alta qualidade, com um design que equilibra um visual casual e sofisticado. 
+                    </p>
+                    <button class="saiba-mais">
+                        Saiba Mais
+                    </button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="car-img">
+                    <img src="img/Puma (1).png" alt="imagem tenis3"  style="  transform: rotate(-0.3deg);">
+                </div>
+                <div class="content">
+                    <p class="car-information">
+                    </p>
+                    <h2>
+                        PUMA
+                    </h2>
+                    <p class="description">
+                        O Puma Shuffle é um tênis casual que combina estilo retrô e esportivo, inspirado nos modelos clássicos da marca. Ele possui uma parte superior em couro sintético ou camurça, com detalhes perfurados para garantir um toque de sofisticação e respirabilidade. 
+                    </p>
+                    <button class="saiba-mais">
+                        Saiba Mais
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button id="prev"><img src="img/Seta.png" alt="seta esquerda"></button>
+            <button id="next"><img src="img/Seta.png" alt="seta direita"></button>
+        </div>
+
+        <div class="indicators">
+            <div class="number">01</div>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="atendimento">
+        <h1>Atendimento</h1>
+        <div class="itens-atendimento">
+            <div class="inner-atendimento">
+                <div class="imagem-atendimento">
+                    <img src="img/1.png" alt="">
+                </div>
+            </div>
+            <div class="inner-atendimento">
+                <div class="imagem-atendimento">
+                    <img src="img/2.png">
+                </div>
+            </div>
+            <div class="inner-atendimento">
+                <div class="imagem-atendimento">
+                    <img src="img/3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="localidade">
+        <h1>Localidade</h1>
+        <div class="google-maps">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.3535967056264!2d-46.55476922541913!3d-23.62750466402413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5d2908448483%3A0xfe715daeac3587cf!2sR.%20Taipas%2C%20587%20-%20Santa%20Maria%2C%20S%C3%A3o%20Caetano%20do%20Sul%20-%20SP%2C%2009560-200!5e0!3m2!1spt-BR!2sbr!4v1729729609568!5m2!1spt-BR!2sbr"
+                width="1220" height="450" style="border-radius: 20px; border: 2px solid #000;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="pedidos">
+        <h3>Entre em contato agora e garanta o seu pedido exclusivo!</h3>
+        <div class="bottom">
+            <a href="#"><button class="button-pedidos">Peça já</button></a>
+        </div>
+    </div>
+    <div class="duvidas"> <!--Aba de Suporte-->
+        <div class="lll">
+            <div class="ttt">
+                <h1>Suporte e Dúvidas</h1>
+                <p>Bem-vindo à página de suporte e dúvidas da nossa loja Maurício Calçados. Estamos aqui para ajudar!
+                </p><br>
+
+                <h2>Informações de Contato</h2><br>
+                <p>@mauriciocalcadosltda </p>
+                <p>Telefone: (11) 961839801 </p>
+                <p> Facebook: Creações Mauricio</p>
+
+            </div>
+            <div class="suporte">
+                <h2>Perguntas Frequentes</h2><br>
+                <h3>1. Qual é o prazo de entrega?</h3>
+                <p>O prazo de entrega pode variar de acordo com a localização, mas geralmente leva de 3 a 5 dias.</p>
+                <br>
+
+                <h3>2. Como faço para trocar um produto?</h3>
+                <p>Para solicitar a troca de um produto, entre em contato com o nosso suporte pelo telefone informado.
+                </p><br>
+
+                <h3>3. Quais são as formas de pagamento aceitas?</h3>
+                <p>Aceitamos cartões de crédito, débito, e pagamento via Pix.</p>
+            </div>
+        </div>
+        <div class="information-left-duvidas"> <!-- Lado Esquerdo -->
+            <div class="items">
+                <div class="item">
+                    <a href="https://www.instagram.com/mauriciocalcadosltda/" target="_blank" class="mobile-icon"><i class="ri-instagram-fill"></i></a>
+                </div>
+                <div class="item">
+                    <a href="https://www.facebook.com/share/15EuZ99PGv/?mibextid=LQQJ4d" target="_blank" class="icon"><i class="ri-facebook-circle-fill"></i></a>
+                </div>
+                <div class="item">
+                    <a href="https://wa.me/5511961839801" target="_blank" class="mobile-icon"><i class="ri-whatsapp-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontwasome.com/998c60f77.js" crossorigin="anonymous"></script>
+</head>
+<body>

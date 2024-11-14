@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/detalhes.css">
+    <title>Maurício Calçados - Detalhes</title>
+</head>
+
+<body>
+    <header>
+        <div id="logotipo">
+            <img src="img/Logo_Loja-removebg-preview.png" width="100" height="70">
+        </div>
+        <nav>
+            <div class="button">
+                <a href="index.html" target="_blank"><button>Página Inicial</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container"> <!---Informação do fundo-->
+        <h1 class="title-container">Mizuno</h1> <!--Título-->
+        <div class="img-principal">
+            <img src="img/5bb3d226-41ca-41e1-a65e-0c5fc7fd0bae.png" >
+        </div>
+        <div class="letras">
+            <h3 class="tree-title">Você cansou de Tênis Machucando seus Pés Durante a Corrida?</h3>
+        </div>
+    </div>
+
+    <div class="Seg_pag"> <!--Imagem do centro-->
+        <div class="seg-box">
+            <div class="seg-info">
+                <p>
+                    Conforto: O tênis deve ser projetado com uma palmilha acolchoada e materiais respiráveis que garantam ventilação adequada, evitando o superaquecimento dos pés. O suporte interno deve ser ergonômico para manter os pés em uma posição natural, evitando desconforto e possíveis dores durante o uso prolongado, seja em corridas ou caminhadas.
+                </p>
+                <p>
+                    Amortecimento: A presença de tecnologias modernas de amortecimento, como sistemas de gel ou espumas de alta performance, é essencial para absorver o impacto a cada passo. Isso protege as articulações e músculos, reduzindo o risco de lesões, especialmente durante atividades de alta intensidade. Um bom amortecimento também melhora o retorno de energia, tornando a corrida mais eficiente e menos desgastante.
+                </p>
+                <p>
+                    Durabilidade: O uso de materiais premium, como borrachas de alta resistência na sola e tecidos de malha reforçada no cabedal, aumenta a vida útil do calçado. A durabilidade também está relacionada ao reforço em áreas de maior desgaste, como o calcanhar e a ponta do tênis, garantindo que ele se mantenha em excelente estado mesmo após muitos usos em diferentes terrenos.
+                </p>
+                <p>
+                    Estabilidade: Um tênis de qualidade deve ter uma base mais larga e um design de sola que ofereça tração eficiente. Isso ajuda a manter o equilíbrio em superfícies irregulares e evita torções. Estruturas de suporte, como contrafortes no calcanhar e sistemas de suporte no meio do pé, também contribuem para manter a pisada firme e alinhada, melhorando o desempenho e a segurança do usuário em corridas e treinos.
+                </p>
+            </div>
+            <img src="img/5bb3d226-41ca-41e1-a65e-0c5fc7fd0bae.png">
+        </div>
+    </div>
+
+    <div class="img_final">
+        <div class="img-left">
+            <img src="img/5bb3d226-41ca-41e1-a65e-0c5fc7fd0bae.png">
+        </div>
+
+        <div class="letras_final">
+            <h4>NÃO PERCA TEMPO!</h4>
+
+            <p class="tree-title" style="color: red;">Compre consoco!</p>
+        </div>
+    </div>
+    <script>
+       // Cursor Animation - Pagina Detalhes
+        function spark(event) {
+            let i = document.createElement('i');
+            i.style.left = (event.pageX) + 'px';
+            i.style.top = (event.pageY) + 'px';
+            i.style.scale = `${Math.random() * 2 + 1}`;
+            i.style.setProperty('--x', getRandomTransitionValue());
+            i.style.setProperty('--y', getRandomTransitionValue());
+
+            document.body.appendChild(i);
+
+            setTimeout(() => {
+                document.body.removeChild(i);
+            }, 2000);
+        }
+
+        function getRandomTransitionValue() {
+            return `${Math.random() * 400 - 200}px`;
+        }
+
+        document.addEventListener('mousemove', spark);
+    </script>
+</body>
+</html>

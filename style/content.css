@@ -1,0 +1,709 @@
+:root {
+  --width: 100px;
+  --height: 50px;
+  --quantity: 10;
+  --color: #fff;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  /*background: radial-gradient( #691212,  #C02121, #DC2E2E);*/
+  padding: 20px 30px 20px 30px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-left: auto;
+  z-index: 0;
+  margin: 0;
+}
+
+body.dark {
+  background: #2f3b46;
+  color: #fff;
+}
+
+body::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: url('background-imagem/fcff14bb-3a7d-42b7-a9c3-21d349d0cd19.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  border-radius: 50px;
+  filter: blur(5px);
+}
+
+img{
+  object-fit: cover;
+}
+
+a{
+  text-decoration: none;
+}
+
+@keyframes slide {
+  50% {
+      left: 10%;
+      top: -40%;
+  }
+
+  100% {
+      left: -15%;
+      top: -15%;
+  }
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+
+  & h1 {
+    font-size: 8rem;
+    color: #fff;
+  }
+
+  & .secondtilte {
+    & .describe {
+      font-size: 42pt;
+      margin-top: 35px;
+      color: #fff;
+    }
+
+    & p {
+      text-align: justify;
+      color: #fff;
+    }
+  }
+}
+
+.imgmovie {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 50px 20px;
+  cursor: pointer;
+
+  & img:hover {
+    transform: scale(1.2);
+    transition: ease 0.8s all;
+  }
+
+  & .information-left {
+    position: relative;
+    top: -100px;
+    & .items {
+      & .item:hover {
+        box-shadow: 0px 0px 10px 6px #0000008d;
+        transition: all 0.5s ease;
+        transform: rotate(30deg);
+        transform: scale(1.2);
+        border-radius: 20px;
+      }
+
+      .item:hover{
+        transition: all 0.5s linear;
+        margin-bottom: 20%;
+        -webkit-box-reflect: below 5px
+            linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+        border-radius: 20px;
+      }
+
+      & .item {
+        border-radius: 20px;
+        & i {
+          font-size: 2.5rem;
+        }
+
+        & .ri-instagram-fill {
+          color: #ff8ef7e3;
+        }
+
+        & .ri-facebook-circle-fill {
+          color: #1947b1;
+        }
+
+        & .ri-whatsapp-fill {
+          color: #33b62e;
+        }
+
+        & .icon::before {
+            background: var(--color);
+            content: " ";
+            position: absolute;
+            width: 130%;
+            height: 130%;
+            left: -160%;
+            top: 80%;
+            transform: rotate(45deg);
+        }
+
+        & .icon:hover > i{
+            scale: 1.2;
+        }
+
+        & .icon:hover::before {
+            animation: 
+            slide 1.0s forwards;
+        }
+
+        & .icon {
+            width: 5.625rem;
+            height: 5.625rem;
+            background: #0000006c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+      }
+    }
+
+    & .detalhes {
+      padding: 15px 0 0 0;
+      display: flex;
+      justify-content: center;
+
+      & .detalhes-button::after {
+        content: "  ➞";
+        transition: all 0.5s ease-in-out;
+        opacity: 0;
+      }
+
+      & .detalhes-button:hover::after {
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+      }
+
+      & .detalhes-button:hover{
+        transition: all 0.5s linear;
+        background: #fff;
+        color: #000;
+        -webkit-box-reflect: below 5px
+            linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+      }
+
+      & .detalhes-button {
+        width: 200px;
+        height: 32px;
+        color: #fff;
+        align-items: center;
+        background: #00000077;
+        border: 2px solid #eeeeee;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  & .img-centralizada {
+    width: 800px;
+    margin-top: 5%;
+    position: relative;
+    bottom: 290px;
+    transition: ease-in 0.8s all;
+    transform: rotate(-8deg);
+  }
+
+  & .information-right {
+    & .video-loja {
+      align-items: center;
+      width: 400px;
+      height: 250px;
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+}
+
+.loop {
+  margin-top: -230px;
+  width: 100%;
+  height: var(--height, 100px);
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 50%, transparent);
+
+  & .list {
+    display: flex;
+    width: 100%;
+    min-height: calc(var(--width, 100px) * var(--quantity, 10));
+    position: relative;
+
+    & .inner {
+      width: var(--width, 100px);
+      height: var(--height, 100px);
+      position: absolute;
+      left: 100%;
+      animation: autoRun 10s linear infinite;
+      animation-delay: calc(10s / var(--quantity, 10) * var(--position));
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+
+#produtos-loja {
+  margin-top: 5%;
+}
+.icones {
+  text-align: left;
+  margin-left: 2.5%;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.produtos-container {
+  display: flex;
+  gap: 20px;
+}
+
+.produto {
+  text-align: left;
+  width: 25.7%;
+  border-radius: 20px;
+  transition: ease 2s all;
+}
+
+.nome-tenis {
+  color: #979797;
+  padding-left: 20px;
+}
+
+.descricao-tenis {
+  color: #5f5f5f;
+  padding-left: 20px;
+}
+
+.produto img {
+  width: 100%;
+  height: 40vh;
+  border-radius: 15px;
+}
+
+.produto:nth-child(even) {
+  transform: translateY(10px);
+}
+
+.produto:hover {
+  transform: scale(1.05);
+  transition: ease 1s all;
+  box-shadow: 3px 3px 5px #00000077;
+}
+
+.produto p {
+  margin: 6px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.loja {
+  text-align: left;
+  font-weight: bold;
+}
+
+.nossa-loja {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.loja-container {
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+}
+
+.loja-imagem img {
+  width: 35vw;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.loja-texto {
+  width: 600px;
+  text-align: justify;
+}
+
+.loja-texto p {
+  margin-top: 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/*Slide do tenis*/
+section {
+  background: linear-gradient(#dc2e2e, #5c0909);
+  height: 90vh;
+  position: relative;
+  border-radius: 20px;
+  margin-top: 25px;
+
+  & .list {
+    width: 70vw;
+    height: 100%;
+    margin: auto;
+    position: relative;
+
+    & .item {
+      position: absolute;
+      inset: 0;
+
+      & .car-img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40%;
+
+        & img {
+          width: 100%;
+          transform: rotate(-30deg);
+        }
+      }
+
+      & .content {
+        position: absolute;
+        right: 100px;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        gap: 45px;
+
+        & .car-information {
+          font-weight: bold;
+          color: #fff;
+        }
+
+        & h2 {
+          font-size: 2em;
+          line-height: 1em;
+          color: #fff;
+        }
+
+        & .description {
+          color: #d9d9d9;
+          font-size: 10px;
+          text-align: right;
+          max-width: 400px;
+        }
+
+        & .saiba-mais {
+          border-radius: 30px;
+          height: 35px;
+          width: 120px;
+          text-transform: uppercase;
+          border: 2px solid #000000;
+          background-color: #5c0909;
+          color: rgb(255, 255, 255);
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 200px;
+      width: 100%;
+      top: 50%;
+      border-top: 1px solid #fff;
+    }
+  }
+
+  .arrows {
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translate(-50%, -25px);
+
+    & button:nth-child(1) {
+      & img {
+        transform: scale(-1);
+      }
+    }
+
+    & button {
+      top: 60%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+
+      & img {
+        width: 30px;
+        margin-top: 4px;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: #5c0909;
+      }
+    }
+  }
+
+  .indicators {
+    position: absolute;
+    top: 50%;
+    height: 200px;
+    width: 90vw;
+    left: 55%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 15px;
+
+    & .number {
+      font-size: 3em;
+      color: #fff;
+    }
+
+    & ul {
+      display: flex;
+      gap: 10px;
+
+      & li {
+        width: 50px;
+        height: 5px;
+        background-color: #5c0909;
+        border-radius: 5px;
+        transition: 0.5s;
+        list-style: none;
+      }
+
+      & .active {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+section {
+  & .list {
+    --calculation: 1;
+
+    & .item {
+      transform: translateX(calc(100vw * var(--calculation)));
+      transition: 0.5s;
+      opacity: 0;
+
+      & .car-img {
+        & img {
+          transform: rotate(0);
+          transition: 0.5s;
+          transition-delay: 0.3s;
+        }
+      }
+
+      & .content {
+        & .car-information,
+        h2,
+        .description,
+        .saiba-mais {
+          transform: translateX(calc(200px * var(--calculation)));
+          transition: 0.7s;
+          transition-delay: 0.3s;
+          opacity: 0;
+        }
+
+        & h2 {
+          transition-delay: 0.5s;
+        }
+
+        & .description {
+          transition-delay: 0.7s;
+        }
+
+        & .saiba-mais {
+          transition-delay: 0.9s;
+        }
+      }
+    }
+
+    & .active {
+      transform: translateX(0);
+      transition: 0.5s;
+      opacity: 1;
+
+      & .car-img {
+        & img {
+          transform: rotate(-9deg);
+          width: 600px;
+        }
+      }
+
+      & .content {
+        & .car-information,
+        h2,
+        .description,
+        .saiba-mais {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#atendimento {
+& .atendimento > h1{
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+}
+
+.itens-atendimento{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+    text-align: justify;   
+    color: #000;
+}
+
+.imagem-atendimento > img{
+    width: 460px;
+    height: 460px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+
+#localidade {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  & .google-maps{
+    & iframe{
+      width: 95vw;
+    }
+  }
+}
+
+.pedidos {
+  margin-top: 20px;
+  background: linear-gradient(#dc2e2e, #5c0909);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  display: flex;
+  color: #000;
+  align-items: center;
+  justify-content: space-around;
+
+  & .bottom {
+    & .button-pedidos::after {
+      content: "  ➞";
+      transition: all 0.5s ease-in-out;
+      opacity: 1;
+    }
+
+    & .button-pedidos {
+      width: 200px;
+      height: 32px;
+      color: #fff;
+      align-items: center;
+      background: #00000077;
+      border: 2px solid #000000;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
+
+.duvidas {
+  /*width: 95%;*/
+  /*margin: 0 auto;*/
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #cfcfcf;
+  box-shadow: 0px 0px 10px 0px rgba(58, 57, 57, 0.288);
+  display: flex;
+  gap: 10%;
+  color: #000;
+}
+
+.lll {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #000;
+}
+
+.suporte {
+  cursor: pointer;
+  color: #000;
+}
+
+.items {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.item {
+  font-size: 24px;
+  cursor: pointer;
+  & i {
+    font-size: 2.5rem;
+  }
+
+  & .ri-instagram-fill {
+    color: orangered;
+  }
+
+  & .ri-facebook-circle-fill {
+    color: #1947b1;
+  }
+
+  & .ri-whatsapp-fill {
+    color: #33b62e;
+  }
+}
+
+.mobile-nossa-loja{
+  display: none;
+}
+
+.mobile-imgmovie{
+  display: none;
+}
+
